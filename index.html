@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rye On The Road | San Francisco Mobile Cocktail Bar</title>
+  <meta name="description" content="Rye On The Road is a San Francisco mobile craft cocktail bar founded by Greg Lindgren and Jon Gasparini. We serve private events, weddings, corporate events, and public events from 50 to 100,000+ guests across the Bay Area." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SKIP LINK -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <div class="nav__inner container">
+        <a href="#home" class="nav__logo">Rye On The Road</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" class="btn btn--outline">Book Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__inner container">
+        <p class="hero__eyebrow">Est. San Francisco, CA</p>
+        <h1 class="hero__title" id="hero-heading">Rye On<br />The Road</h1>
+        <p class="hero__tagline">San Francisco Craft Cocktails, Anywhere.</p>
+        <div class="hero__actions">
+          <a href="#services" class="btn btn--gold">Our Services</a>
+          <a href="#contact" class="btn btn--ghost">Get a Quote</a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about" aria-labelledby="about-heading">
+      <div class="container container--split">
+        <div class="about__visual">
+          <div class="about__img-frame">
+            <!--
+              When a real photo is added, replace this placeholder with:
+              <img src="assets/images/photo.jpg" alt="Describe the image here" />
+            -->
+            <div class="img-placeholder" aria-hidden="true">
+              <span>Photo Coming Soon</span>
+            </div>
+          </div>
+          <div class="about__accent-card" aria-hidden="true">
+            <p class="about__accent-stat">100K+</p>
+            <p class="about__accent-label">Guests at a Single Event</p>
+          </div>
+        </div>
+        <div class="about__content">
+          <p class="section__eyebrow" aria-hidden="true">Our Story</p>
+          <h2 class="section__title" id="about-heading">From the Founders of Rye,<br />15 Romolo &amp; The Cordial</h2>
+          <p class="about__body">
+            Rye On The Road was founded by Greg Lindgren and Jon Gasparini, the team behind three of San Francisco's most beloved bars. We spent years building neighborhood institutions and learning what makes people feel genuinely taken care of. Then we put it all on wheels.
+          </p>
+          <p class="about__body">
+            We serve events of every scale, from intimate gatherings of 50 to public events with over 100,000 guests. Whether it's a wedding in Marin, a corporate activation in SoMa, or a night market at Fort Mason, we show up with the same craft every time. Our commissary is rooted at 140 10th Street in San Francisco, the kitchen behind everything we pour.
+          </p>
+          <a href="#contact" class="btn btn--gold">Start Planning</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="divider" aria-hidden="true">
+      <div class="divider__line"></div>
+      <svg class="divider__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <path d="M20 4L24 16H36L26 24L30 36L20 28L10 36L14 24L4 16H16L20 4Z" fill="#C8A85C"/>
+      </svg>
+      <div class="divider__line"></div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow" aria-hidden="true">What We Offer</p>
+          <h2 class="section__title" id="services-heading">Every Occasion,<br />Perfectly Poured</h2>
+        </div>
+        <div class="services__grid">
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M8 14h32l-4 20H12L8 14z" stroke="#C8A85C" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 14L20 6h8l4 8" stroke="#C8A85C" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 34h24" stroke="#C8A85C" stroke-width="1.5"/><path d="M24 14v20" stroke="#C8A85C" stroke-width="1.5" stroke-dasharray="2 2"/></svg>
+            </div>
+            <h3 class="service-card__title">Private Parties</h3>
+            <p class="service-card__desc">Birthdays, dinner parties, anniversaries, backyard gatherings. We handle setup, service, and breakdown so you can actually be present at your own event.</p>
+          </article>
+
+          <article class="service-card service-card--featured">
+            <div class="service-card__badge" aria-label="Most popular service">Most Popular</div>
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"><circle cx="24" cy="16" r="8" stroke="#1A1A1A" stroke-width="1.5"/><path d="M12 40c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/><path d="M30 22l8 4M18 22l-8 4" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="service-card__title">Weddings</h3>
+            <p class="service-card__desc">Your wedding deserves more than a standard bar package. We build a custom menu around you as a couple and keep your guests celebrating all night.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"><rect x="8" y="12" width="32" height="24" rx="2" stroke="#C8A85C" stroke-width="1.5"/><path d="M8 20h32" stroke="#C8A85C" stroke-width="1.5"/><path d="M20 20v16" stroke="#C8A85C" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="service-card__title">Corporate Events</h3>
+            <p class="service-card__desc">Product launches, client entertaining, company milestones. We've worked with Bay Area companies of every size. Always on brand, always on time.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M24 8C16 8 10 14 10 22c0 10 14 22 14 22s14-12 14-22c0-8-6-14-14-14z" stroke="#C8A85C" stroke-width="1.5"/><circle cx="24" cy="22" r="4" stroke="#C8A85C" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="service-card__title">Public Events</h3>
+            <p class="service-card__desc">We've served crowds at the Fort Mason Night Market, The Other Art Fair LA, and large-scale festivals throughout the Bay Area. 50 guests or 100,000. We scale to fit.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M14 24h20M24 14v20" stroke="#C8A85C" stroke-width="1.5" stroke-linecap="round"/><circle cx="24" cy="24" r="14" stroke="#C8A85C" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="service-card__title">Custom Menus</h3>
+            <p class="service-card__desc">Seasonal Bay Area ingredients, house-made syrups, and cocktails built around your event, not the other way around. Every menu starts as a blank page.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M16 32V20l8-8 8 8v12" stroke="#C8A85C" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 32h28" stroke="#C8A85C" stroke-width="1.5" stroke-linecap="round"/><rect x="20" y="24" width="8" height="8" stroke="#C8A85C" stroke-width="1.5"/></svg>
+            </div>
+            <h3 class="service-card__title">Venue Partnerships</h3>
+            <p class="service-card__desc">Need a reliable bar partner for a recurring series or residency? We bring the consistency and local expertise that only comes from two decades in the SF bar scene.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE BANNER (decorative/promotional, no heading, so use div not section) -->
+    <div class="quote-banner">
+      <div class="container">
+        <blockquote class="quote-banner__text">
+          The best bar in San Francisco is the one that comes to you.
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact" aria-labelledby="contact-heading">
+      <div class="container container--split contact__split">
+        <div class="contact__info">
+          <p class="section__eyebrow" aria-hidden="true">Get In Touch</p>
+          <h2 class="section__title" id="contact-heading">Let's Make<br />Something Special</h2>
+          <p class="contact__body">
+            Ready to bring the bar to your next event? Tell us a little about what you're planning and we'll get back to you within 24 hours.
+          </p>
+          <ul class="contact__details">
+            <li>
+              <span class="contact__detail-label">Location</span>
+              <span>San Francisco Bay Area, CA</span>
+            </li>
+            <li>
+              <span class="contact__detail-label">Email</span>
+              <span>hello@ryeontheroad.com</span>
+            </li>
+            <li>
+              <span class="contact__detail-label">Follow</span>
+              <span>@ryeontheroad</span>
+            </li>
+          </ul>
+        </div>
+        <div class="contact__form-wrap">
+          <form class="contact__form" name="contact" method="POST" aria-label="Event inquiry form" novalidate>
+            <p class="form-required-note"><span aria-hidden="true">*</span> Indicates a required field</p>
+
+            <div class="form-row">
+              <label class="form-label" for="name">
+                Your Name <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input class="form-input" type="text" id="name" name="name"
+                     placeholder="Jane Smith" required
+                     autocomplete="name"
+                     aria-required="true"
+                     aria-describedby="name-error" />
+              <span class="form-error" id="name-error" role="alert"></span>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="email">
+                Email Address <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <input class="form-input" type="email" id="email" name="email"
+                     placeholder="jane@example.com" required
+                     autocomplete="email"
+                     aria-required="true"
+                     aria-describedby="email-error" />
+              <span class="form-error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="event-type">Event Type</label>
+              <select class="form-input form-select" id="event-type" name="event-type" autocomplete="off">
+                <option value="">Select an event type</option>
+                <option>Wedding</option>
+                <option>Private Party</option>
+                <option>Corporate Event</option>
+                <option>Pop-Up / Market</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="date">Event Date</label>
+              <input class="form-input" type="date" id="date" name="date" autocomplete="off" />
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="message">Tell Us More</label>
+              <textarea class="form-input form-textarea" id="message" name="message"
+                        placeholder="Guest count, venue, dream cocktail, anything helps..."
+                        autocomplete="off"></textarea>
+            </div>
+
+            <!-- Live region for form-level status announcements -->
+            <div id="form-status" class="sr-only" aria-live="assertive" aria-atomic="true"></div>
+
+            <button type="submit" class="btn btn--gold btn--full">Send Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">Rye On The Road</p>
+        <p class="footer__tagline">San Francisco Craft Cocktails, Anywhere.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer__copy">&copy; 2026 Rye On The Road. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
