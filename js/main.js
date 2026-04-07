@@ -38,7 +38,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 if (!prefersReducedMotion) {
   const fadeEls = document.querySelectorAll(
     '.hero__eyebrow, .hero__title, .hero__tagline, .hero__actions, ' +
-    '.section__eyebrow, .section__title, .about__body, ' +
+    '.section__eyebrow, .section__title, .about__body, .about__stats, ' +
     '.service-card, .contact__body, .contact__details, .contact__form-wrap'
   );
 
