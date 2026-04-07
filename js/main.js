@@ -2,11 +2,16 @@
 const nav = document.getElementById('nav');
 const scrollThreshold = 60;
 
-function updateNav() {
-  nav.classList.toggle('scrolled', window.scrollY > scrollThreshold);
+// data-nav-static: always show the opaque scrolled state (used on inner pages)
+if (nav.hasAttribute('data-nav-static')) {
+  nav.classList.add('scrolled');
+} else {
+  function updateNav() {
+    nav.classList.toggle('scrolled', window.scrollY > scrollThreshold);
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
 }
-window.addEventListener('scroll', updateNav, { passive: true });
-updateNav();
 
 // ── NAV: mobile toggle ──
 const toggle = document.querySelector('.nav__toggle');
@@ -55,6 +60,85 @@ if (!prefersReducedMotion) {
   );
 
   fadeEls.forEach(el => observer.observe(el));
+}
+
+// ── CONTACT PAGE FORM (Formspree) ──
+const contactPageForm = document.getElementById('contact-page-form');
+const cpStatus = document.getElementById('cp-form-status');
+
+if (contactPageForm) {
+  const cpValidators = {
+    name: {
+      el: document.getElementById('cp-name'),
+      errorEl: document.getElementById('cp-name-error'),
+      validate(val) {
+        if (!val.trim()) return 'Please enter your name.';
+        return '';
+      },
+    },
+    email: {
+      el: document.getElementById('cp-email'),
+      errorEl: document.getElementById('cp-email-error'),
+      validate(val) {
+        if (!val.trim()) return 'Please enter your email address.';
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim())) return 'Please enter a valid email address.';
+        return '';
+      },
+    },
+    message: {
+      el: document.getElementById('cp-message'),
+      errorEl: document.getElementById('cp-message-error'),
+      validate(val) {
+        if (!val.trim()) return 'Please tell us a bit about your event.';
+        return '';
+      },
+    },
+  };
+
+  function cpSetFieldError(key, message) {
+    const { el, errorEl } = cpValidators[key];
+    if (message) {
+      el.setAttribute('aria-invalid', 'true');
+      errorEl.textContent = message;
+    } else {
+      el.removeAttribute('aria-invalid');
+      errorEl.textContent = '';
+    }
+  }
+
+  Object.entries(cpValidators).forEach(([key, { el }]) => {
+    el.addEventListener('input', () => {
+      if (el.getAttribute('aria-invalid') === 'true') {
+        cpSetFieldError(key, cpValidators[key].validate(el.value));
+      }
+    });
+    el.addEventListener('blur', () => {
+      cpSetFieldError(key, cpValidators[key].validate(el.value));
+    });
+  });
+
+  // Validate on submit; if valid, allow the native POST to Formspree.
+  // If invalid, prevent submission and surface errors.
+  contactPageForm.addEventListener('submit', e => {
+    let firstInvalid = null;
+    let errorCount = 0;
+
+    Object.entries(cpValidators).forEach(([key, { el, validate }]) => {
+      const message = validate(el.value);
+      cpSetFieldError(key, message);
+      if (message) {
+        errorCount++;
+        if (!firstInvalid) firstInvalid = el;
+      }
+    });
+
+    if (errorCount > 0) {
+      e.preventDefault();
+      cpStatus.textContent = `Please fix ${errorCount} error${errorCount > 1 ? 's' : ''} before submitting.`;
+      firstInvalid.focus();
+    }
+    // If no errors, the form submits naturally to Formspree via action/method POST.
+  });
 }
 
 // ── CONTACT FORM VALIDATION ──

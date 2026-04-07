@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Rye On The Road</title>
+  <meta name="description" content="Get in touch with Rye On The Road. Book mobile craft cocktail bar service for your corporate event, wedding, private party, or public event in the San Francisco Bay Area." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <nav class="nav" id="nav" aria-label="Main navigation" data-nav-static>
+      <div class="nav__inner container">
+        <a href="index.html" class="nav__logo">Rye On The Road</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="contact.html" class="btn btn--outline">Book Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="contact-page-heading">
+      <div class="page-hero__bg" aria-hidden="true"></div>
+      <div class="page-hero__inner container">
+        <p class="hero__eyebrow">Get In Touch</p>
+        <h1 class="page-hero__title" id="contact-page-heading">Let's Make<br />Something Special</h1>
+        <p class="page-hero__tagline">Tell us about your event and we'll get back to you within 24 hours.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM + INFO -->
+    <section class="cp-section section" aria-labelledby="contact-page-heading">
+      <div class="container cp-split">
+
+        <!-- FORM -->
+        <div class="cp-form-wrap">
+          <form
+            id="contact-page-form"
+            class="contact-page-form"
+            action="https://formspree.io/f/mreodbak"
+            method="POST"
+            novalidate
+            aria-label="Event inquiry form"
+          >
+            <input type="hidden" name="_subject" value="New inquiry from Rye On The Road website" />
+
+            <p class="form-required-note"><span aria-hidden="true">*</span> Indicates a required field</p>
+
+            <!-- Row: Name + Email -->
+            <div class="form-grid">
+              <div class="form-row">
+                <label class="form-label" for="cp-name">
+                  Name <span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <input class="form-input" type="text" id="cp-name" name="name"
+                       placeholder="Jane Smith"
+                       required autocomplete="name"
+                       aria-required="true" aria-describedby="cp-name-error" />
+                <span class="form-error" id="cp-name-error" role="alert"></span>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="cp-email">
+                  Email <span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <input class="form-input" type="email" id="cp-email" name="email"
+                       placeholder="jane@example.com"
+                       required autocomplete="email"
+                       aria-required="true" aria-describedby="cp-email-error" />
+                <span class="form-error" id="cp-email-error" role="alert"></span>
+              </div>
+            </div>
+
+            <!-- Row: Phone + Company -->
+            <div class="form-grid">
+              <div class="form-row">
+                <label class="form-label" for="cp-phone">Phone</label>
+                <input class="form-input" type="tel" id="cp-phone" name="phone"
+                       placeholder="(415) 555-0100"
+                       autocomplete="tel" />
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="cp-company">Company</label>
+                <input class="form-input" type="text" id="cp-company" name="company"
+                       placeholder="Acme Co."
+                       autocomplete="organization" />
+              </div>
+            </div>
+
+            <!-- Row: Event Date + Guest Count -->
+            <div class="form-grid">
+              <div class="form-row">
+                <label class="form-label" for="cp-date">Event Date</label>
+                <input class="form-input" type="date" id="cp-date" name="event_date"
+                       autocomplete="off" />
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="cp-guests">Estimated Guest Count</label>
+                <input class="form-input" type="text" id="cp-guests" name="guest_count"
+                       placeholder="e.g. 150 or 500–1,000"
+                       inputmode="text" autocomplete="off" />
+              </div>
+            </div>
+
+            <!-- Event Type -->
+            <div class="form-row">
+              <label class="form-label" for="cp-event-type">Event Type</label>
+              <select class="form-input form-select" id="cp-event-type" name="event_type" autocomplete="off">
+                <option value="">Select an event type</option>
+                <option>Corporate</option>
+                <option>Wedding</option>
+                <option>Private Party</option>
+                <option>Public Event</option>
+                <option>Brand Activation</option>
+                <option>Classes / Tastings</option>
+                <option>Venue Rental</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <!-- Location -->
+            <div class="form-row">
+              <label class="form-label" for="cp-location">Event Location</label>
+              <input class="form-input" type="text" id="cp-location" name="location"
+                     placeholder="Venue name or city"
+                     autocomplete="off" />
+            </div>
+
+            <!-- Message -->
+            <div class="form-row">
+              <label class="form-label" for="cp-message">
+                Message <span class="required-mark" aria-hidden="true">*</span>
+              </label>
+              <textarea class="form-input form-textarea form-textarea--tall"
+                        id="cp-message" name="message"
+                        placeholder="Tell us anything that would help — vibe, service level, dietary needs, dream cocktail..."
+                        required
+                        aria-required="true"
+                        aria-describedby="cp-message-error"
+                        autocomplete="off"></textarea>
+              <span class="form-error" id="cp-message-error" role="alert"></span>
+            </div>
+
+            <!-- Live region for screen reader announcements -->
+            <div id="cp-form-status" class="sr-only" aria-live="assertive" aria-atomic="true"></div>
+
+            <button type="submit" class="btn btn--gold btn--full" id="cp-submit">
+              Send Inquiry
+            </button>
+
+          </form>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <aside class="cp-info" aria-label="Contact information">
+          <div class="cp-info__card">
+            <p class="section__eyebrow">Reach Us Directly</p>
+            <h2 class="cp-info__heading">We'd love to<br />hear from you.</h2>
+            <p class="cp-info__body">
+              Whether you know exactly what you want or are starting from scratch, we're here to help. No event is too small or too large.
+            </p>
+
+            <ul class="cp-info__list">
+              <li class="cp-info__item">
+                <span class="cp-info__label">Email</span>
+                <a href="mailto:info@ryeontheroad.com" class="cp-info__value cp-info__link">
+                  info@ryeontheroad.com
+                </a>
+              </li>
+              <li class="cp-info__item">
+                <span class="cp-info__label">Phone</span>
+                <a href="tel:+14159514886" class="cp-info__value cp-info__link">
+                  (415) 951-4886
+                </a>
+              </li>
+              <li class="cp-info__item">
+                <span class="cp-info__label">Commissary</span>
+                <address class="cp-info__value">
+                  140 10th Street<br />
+                  San Francisco, CA
+                </address>
+              </li>
+              <li class="cp-info__item">
+                <span class="cp-info__label">Service Area</span>
+                <span class="cp-info__value">San Francisco Bay Area</span>
+              </li>
+            </ul>
+
+            <p class="cp-info__response-note">
+              We typically respond within 24 hours.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">Rye On The Road</p>
+        <p class="footer__tagline">San Francisco Craft Cocktails, Anywhere.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="index.html#about">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer__copy">&copy; 2026 Rye On The Road. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
